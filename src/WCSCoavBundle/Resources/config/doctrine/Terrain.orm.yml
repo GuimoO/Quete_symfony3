@@ -27,7 +27,3 @@ WCSCoavBundle\Entity\Terrain:
             length: 255
 
 
-    oneToMany:
-        terrain:
-            targetEntity: WCSCoavBundle\Entity\Flight
-            mappedBy: departures

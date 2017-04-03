@@ -283,4 +283,33 @@ class Flight
     {
         return $this->plane;
     }
+    /**
+     * @var \WCWCSCoavBundle\Entity\Terrain
+     */
+    private $arrivals;
+
+
+    /**
+     * Set arrivals
+     *
+     * @param \WCWCSCoavBundle\Entity\Terrain $arrivals
+     *
+     * @return Flight
+     */
+    public function setArrivals(\WCWCSCoavBundle\Entity\Terrain $arrivals = null)
+    {
+        $this->arrivals = $arrivals;
+
+        return $this;
+    }
+
+    /**
+     * Get arrivals
+     *
+     * @return \WCWCSCoavBundle\Entity\Terrain
+     */
+    public function getArrivals()
+    {
+        return $this->arrivals;
+    }
 }

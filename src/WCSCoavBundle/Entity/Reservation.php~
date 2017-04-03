@@ -109,4 +109,50 @@ class Reservation
     {
         return $this->flight;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $User;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->User = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add user
+     *
+     * @param \WCSCoavBundle\Entity\User $user
+     *
+     * @return Reservation
+     */
+    public function addUser(\WCSCoavBundle\Entity\User $user)
+    {
+        $this->User[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \WCSCoavBundle\Entity\User $user
+     */
+    public function removeUser(\WCSCoavBundle\Entity\User $user)
+    {
+        $this->User->removeElement($user);
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUser()
+    {
+        return $this->User;
+    }
 }
