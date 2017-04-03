@@ -22,7 +22,7 @@ class TerrainController extends Controller
 
         $terrains = $em->getRepository('WCSCoavBundle:Terrain')->findAll();
 
-        return $this->render('@WCSCoav/terrain/index.html.twig', array(
+        return $this->render('@WCSCoavBundle/terrain/index.html.twig', array(
             'terrains' => $terrains,
         ));
     }
@@ -34,7 +34,7 @@ class TerrainController extends Controller
     public function showAction(Terrain $terrain)
     {
 
-        return $this->render('@WCSCoav/terrain/show.html.twig', array(
+        return $this->render('@WCSCoavBundle/terrain/show.html.twig', array(
             'terrain' => $terrain,
         ));
     }

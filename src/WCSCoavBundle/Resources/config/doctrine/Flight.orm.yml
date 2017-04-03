@@ -9,9 +9,6 @@ WCSCoavBundle\Entity\Flight:
             generator:
                 strategy: AUTO
     fields:
-        departure:
-            type: string
-            length: '4'
         arrival:
             type: string
             length: '4'
@@ -22,4 +19,15 @@ WCSCoavBundle\Entity\Flight:
             type: integer
         takeofTime:
             type: datetime
-    lifecycleCallbacks: {  }
+
+
+    manyToOne:
+        departures:
+            targetEntity: WCSCoavBundle\Entity\Terrain
+            inversedBy: terrain
+
+        plane:
+            targetEntity: WCSCoavBundle\Entity\PlaneModel
+
+
+

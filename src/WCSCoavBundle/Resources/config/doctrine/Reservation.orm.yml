@@ -9,9 +9,13 @@ WCSCoavBundle\Entity\Reservation:
             generator:
                 strategy: AUTO
     fields:
-        name:
-            type: string
-            length: 255
         nbSeats:
             type: integer
-    lifecycleCallbacks: {  }
+
+    manyToOne:
+        flight:
+            targetEntity: WCSCoavBundle\Entity\Flight
+
+    manyToMany:
+        User:
+            targetEntity: WCSCoavBundle\Entity\User

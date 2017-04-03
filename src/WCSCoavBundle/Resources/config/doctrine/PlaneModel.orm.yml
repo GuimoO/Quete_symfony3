@@ -25,4 +25,4 @@ WCSCoavBundle\Entity\PlaneModel:
         status:
             type: string
             length: 255
-    lifecycleCallbacks: {  }
+
